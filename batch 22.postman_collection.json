@@ -17,7 +17,8 @@
 							"var jsondata= pm.response.json()\r",
 							"pm.environment.set(\"Bid\", jsondata.bookingid)"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
@@ -51,7 +52,8 @@
 							"pm.environment.set(\"additionalneeds\", text)\r",
 							"console.log(text)"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -68,12 +70,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{project1}}/booking",
+					"raw": "{{project1}}/booking/{{Bid}}",
 					"host": [
 						"{{project1}}"
 					],
 					"path": [
-						"booking"
+						"booking",
+						"{{Bid}}"
 					]
 				}
 			},
